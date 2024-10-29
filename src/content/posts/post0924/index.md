@@ -36,4 +36,4 @@ SK Hynix A-Die.
 
 ![本機圖片](latency.png "A-Die")
 
-Set up EXPO 6400MT/s CL32-39-39 in BIOS. In Advanced Memory Settings, disable Power Down Enable, Gear Down Mode and Memory Context Restore. With 2133 MHz FCLK setting, got latency 56.7 ns.
+Set up EXPO 6400MT/s CL32-39-39-89 in BIOS. In Advanced Memory Settings, disable Power Down Enable, Gear Down Mode and Memory Context Restore. With UCLK = MEMCLK and 2133 MHz FCLK setting, got latency 56.7 ns.
