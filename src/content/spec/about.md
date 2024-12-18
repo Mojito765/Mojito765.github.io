@@ -1,4 +1,6 @@
 # About
+[Linktree](https://linktr.ee/nik765)
+
 This is the personal website for [Nik](https://github.com/Mojito765).
 
 ::github{repo="Mojito765/Mojito765.github.io"}
