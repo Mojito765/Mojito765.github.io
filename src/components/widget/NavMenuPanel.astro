@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import { type NavBarLink } from '../../types/config'
 import { Icon } from 'astro-icon/components'
 import { url } from '../../utils/url-utils'
@@ -8,6 +9,17 @@ interface Props {
 }
 
 const links = Astro.props.links
+=======
+import { Icon } from "astro-icon/components";
+import { type NavBarLink } from "../../types/config";
+import { url } from "../../utils/url-utils";
+
+interface Props {
+	links: NavBarLink[];
+}
+
+const links = Astro.props.links;
+>>>>>>> upstream/main
 ---
 <div id="nav-menu-panel" class:list={["float-panel float-panel-closed absolute transition-all fixed right-4 px-2 py-2"]}>
     {links.map((link) => (

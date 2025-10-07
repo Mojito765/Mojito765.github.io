@@ -25,3 +25,10 @@ pnpm-debug.log*
 package-lock.json
 bun.lockb
 yarn.lock
+<<<<<<< HEAD
+=======
+
+# ide
+.idea
+*.iml
+>>>>>>> upstream/main

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import { Icon } from 'astro-icon/components'
 import DisplaySettings from './widget/DisplaySettings.svelte'
 import { LinkPreset, type NavBarLink } from '../types/config'
@@ -18,12 +19,38 @@ let links: NavBarLink[] = navBarConfig.links.map(
     return item
   },
 )
+=======
+import { Icon } from "astro-icon/components";
+import { navBarConfig, siteConfig } from "../config";
+import { LinkPresets } from "../constants/link-presets";
+import { LinkPreset, type NavBarLink } from "../types/config";
+import { url } from "../utils/url-utils";
+import LightDarkSwitch from "./LightDarkSwitch.svelte";
+import Search from "./Search.svelte";
+import DisplaySettings from "./widget/DisplaySettings.svelte";
+import NavMenuPanel from "./widget/NavMenuPanel.astro";
+
+const className = Astro.props.class;
+
+let links: NavBarLink[] = navBarConfig.links.map(
+	(item: NavBarLink | LinkPreset): NavBarLink => {
+		if (typeof item === "number") {
+			return LinkPresets[item];
+		}
+		return item;
+	},
+);
+>>>>>>> upstream/main
 ---
 <div id="navbar" class="z-50 onload-animation">
     <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> <!-- used for onload animation -->
     <div class:list={[
         className,
+<<<<<<< HEAD
         "card-base overflow-visible max-w-[var(--page-width)] h-[4.5rem] rounded-t-none mx-auto flex items-center justify-between px-4"]}>
+=======
+        "card-base !overflow-visible max-w-[var(--page-width)] h-[4.5rem] !rounded-t-none mx-auto flex items-center justify-between px-4"]}>
+>>>>>>> upstream/main
         <a href={url('/')} class="btn-plain scale-animation rounded-lg h-[3.25rem] px-5 font-bold active:scale-95">
             <div class="flex flex-row text-[var(--primary)] items-center text-md">
                 <Icon name="material-symbols:home-outline-rounded" class="text-[1.75rem] mb-1 mr-2" />
@@ -44,23 +71,33 @@ let links: NavBarLink[] = navBarConfig.links.map(
         </div>
         <div class="flex">
             <!--<SearchPanel client:load>-->
+<<<<<<< HEAD
             <Search client:load>
                 <Icon slot="search-icon" name="material-symbols:search" class="absolute text-[1.25rem] pointer-events-none ml-3 transition my-auto text-black/30 dark:text-white/30"></Icon>
                 <!--<Icon slot="arrow-icon" name="material-symbols:chevron-right-rounded" class="transition text-[1.25rem] my-auto text-[var(&#45;&#45;primary)]"></Icon>-->
                 <Icon slot="arrow-icon" name="fa6-solid:chevron-right" class="transition text=[0.75rem] translate-x-0.5 my-auto text-[var(--primary)]"></Icon>
                 <Icon slot="search-switch" name="material-symbols:search" class="text-[1.25rem]"></Icon>
             </Search>
+=======
+            <Search client:only="svelte"></Search>
+>>>>>>> upstream/main
             {!siteConfig.themeColor.fixed && (
                     <button aria-label="Display Settings" class="btn-plain scale-animation rounded-lg h-11 w-11 active:scale-90" id="display-settings-switch">
                         <Icon name="material-symbols:palette-outline" class="text-[1.25rem]"></Icon>
                     </button>
             )}
+<<<<<<< HEAD
             <LightDarkSwitch client:load></LightDarkSwitch>
             <button aria-label="Menu" name="Nav Menu" class="btn-plain scale-animation rounded-lg w-11 h-11 active:scale-90 md:hidden" id="nav-menu-switch">
+=======
+            <LightDarkSwitch client:only="svelte"></LightDarkSwitch>
+            <button aria-label="Menu" name="Nav Menu" class="btn-plain scale-animation rounded-lg w-11 h-11 active:scale-90 md:!hidden" id="nav-menu-switch">
+>>>>>>> upstream/main
                 <Icon name="material-symbols:menu-rounded" class="text-[1.25rem]"></Icon>
             </button>
         </div>
         <NavMenuPanel links={links}></NavMenuPanel>
+<<<<<<< HEAD
         <DisplaySettings client:only="svelte">
             <Icon slot="restore-icon" name="fa6-solid:arrow-rotate-left" class="text-[0.875rem]"></Icon>
         </DisplaySettings>
@@ -72,6 +109,13 @@ let links: NavBarLink[] = navBarConfig.links.map(
 
 <script>
 
+=======
+        <DisplaySettings client:only="svelte"></DisplaySettings>
+    </div>
+</div>
+
+<script>
+>>>>>>> upstream/main
 function switchTheme() {
     if (localStorage.theme === 'dark') {
         document.documentElement.classList.remove('dark');
@@ -85,41 +129,67 @@ function switchTheme() {
 function loadButtonScript() {
     let switchBtn = document.getElementById("scheme-switch");
     if (switchBtn) {
+<<<<<<< HEAD
         switchBtn.addEventListener("click", function () {
             switchTheme()
         });
+=======
+        switchBtn.onclick = function () {
+            switchTheme()
+        };
+>>>>>>> upstream/main
     }
 
     let settingBtn = document.getElementById("display-settings-switch");
     if (settingBtn) {
+<<<<<<< HEAD
         settingBtn.addEventListener("click", function () {
+=======
+        settingBtn.onclick = function () {
+>>>>>>> upstream/main
             let settingPanel = document.getElementById("display-setting");
             if (settingPanel) {
                 settingPanel.classList.toggle("float-panel-closed");
             }
+<<<<<<< HEAD
         });
+=======
+        };
+>>>>>>> upstream/main
     }
 
     let menuBtn = document.getElementById("nav-menu-switch");
     if (menuBtn) {
+<<<<<<< HEAD
         menuBtn.addEventListener("click", function () {
+=======
+        menuBtn.onclick = function () {
+>>>>>>> upstream/main
             let menuPanel = document.getElementById("nav-menu-panel");
             if (menuPanel) {
                 menuPanel.classList.toggle("float-panel-closed");
             }
+<<<<<<< HEAD
         });
+=======
+        };
+>>>>>>> upstream/main
     }
 }
 
 loadButtonScript();
+<<<<<<< HEAD
 
 document.addEventListener('astro:after-swap', () => {
     loadButtonScript();
 }, { once: false });
+=======
+>>>>>>> upstream/main
 </script>
 
 {import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js')}}>
 async function loadPagefind() {
+<<<<<<< HEAD
     const pagefind = await import(scriptUrl)
     await pagefind.options({
         'excerptLength': 20
@@ -129,4 +199,38 @@ async function loadPagefind() {
     pagefind.search('')     // speed up the first search
 }
 loadPagefind()
+=======
+    try {
+        const response = await fetch(scriptUrl, { method: 'HEAD' });
+        if (!response.ok) {
+            throw new Error(`Pagefind script not found: ${response.status}`);
+        }
+
+        const pagefind = await import(scriptUrl);
+
+        await pagefind.options({
+            excerptLength: 20
+        });
+
+        window.pagefind = pagefind;
+
+        document.dispatchEvent(new CustomEvent('pagefindready'));
+        console.log('Pagefind loaded and initialized successfully, event dispatched.');
+    } catch (error) {
+        console.error('Failed to load Pagefind:', error);
+        window.pagefind = {
+            search: () => Promise.resolve({ results: [] }),
+            options: () => Promise.resolve(),
+        };
+        document.dispatchEvent(new CustomEvent('pagefindloaderror'));
+        console.log('Pagefind load error, event dispatched.');
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadPagefind);
+} else {
+    loadPagefind();
+}
+>>>>>>> upstream/main
 </script>}

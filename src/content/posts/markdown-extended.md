@@ -1,14 +1,25 @@
 ---
 title: Markdown Extended Features
 published: 2024-05-01
+<<<<<<< HEAD
+=======
+updated: 2024-11-29
+>>>>>>> upstream/main
 description: 'Read more about Markdown features in Fuwari'
 image: ''
 tags: [Demo, Example, Markdown, Fuwari]
 category: 'Examples'
+<<<<<<< HEAD
 draft: true 
 ---
 
 ## GitHub repository cards
+=======
+draft: false 
+---
+
+## GitHub Repository Cards
+>>>>>>> upstream/main
 You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
 
 ::github{repo="Fabrizz/MMM-OnSpotify"}
@@ -43,6 +54,11 @@ Critical content demanding immediate user attention due to potential risks.
 Negative potential consequences of an action.
 :::
 
+<<<<<<< HEAD
+=======
+### Basic Syntax
+
+>>>>>>> upstream/main
 ```markdown
 :::note
 Highlights information that users should take into account, even when skimming.
@@ -53,6 +69,11 @@ Optional information to help a user be more successful.
 :::
 ```
 
+<<<<<<< HEAD
+=======
+### Custom Titles
+
+>>>>>>> upstream/main
 The title of the admonition can be customized.
 
 :::note[MY CUSTOM TITLE]
@@ -65,6 +86,11 @@ This is a note with a custom title.
 :::
 ```
 
+<<<<<<< HEAD
+=======
+### GitHub Syntax
+
+>>>>>>> upstream/main
 > [!TIP]
 > [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
 
@@ -74,4 +100,18 @@ This is a note with a custom title.
 
 > [!TIP]
 > The GitHub syntax is also supported.
+<<<<<<< HEAD
+=======
+```
+
+### Spoiler
+
+You can add spoilers to your text. The text also supports **Markdown** syntax.
+
+The content :spoiler[is hidden **ayyy**]!
+
+```markdown
+The content :spoiler[is hidden **ayyy**]!
+
+>>>>>>> upstream/main
 ```
