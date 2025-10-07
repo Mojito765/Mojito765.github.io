@@ -62,8 +62,13 @@ export async function GET(context: APIContext) {
 				title: post.data.title,
 				pubDate: post.data.published,
 				description: post.data.description || "",
+<<<<<<< HEAD
 				link: url(`/posts/${post.slug}/`),
 				content: sanitizeHtml(parser.render(cleanedContent), {
+=======
+				link: `/posts/${post.id}/`,
+				content: sanitizeHtml(parser.render(content), {
+>>>>>>> upstream/astro-v5-new-api
 					allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
 				}),
 			};
