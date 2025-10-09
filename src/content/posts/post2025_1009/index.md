@@ -20,5 +20,7 @@ draft: false
 :::note
 Integrated Graphics disabled
 :::
+
+## Screenshot
 ![local](s0.png "R7 7700")
 > CPU Package Power 35.365 W
