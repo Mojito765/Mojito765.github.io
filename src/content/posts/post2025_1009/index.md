@@ -5,8 +5,7 @@ description: 'Daily usage log'
 image: './CPU.jpg'
 tags: [Unboxing]
 category: 'PC'
-draft: false 
-lang: 'zh_TW'
+draft: false
 ---
 
 ## Test Setup
