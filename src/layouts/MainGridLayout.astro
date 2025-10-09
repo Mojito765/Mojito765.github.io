@@ -1,29 +1,4 @@
 ---
-<<<<<<< HEAD
-import Footer from '@components/Footer.astro'
-import Navbar from '@components/Navbar.astro'
-import BackToTop from '@components/control/BackToTop.astro'
-import SideBar from '@components/widget/SideBar.astro'
-import Layout from './Layout.astro'
-import { Icon } from 'astro-icon/components'
-import { siteConfig } from '../config'
-
-interface Props {
-  title?: string
-  banner?: string
-  description?: string
-  lang?: string
-  setOGTypeArticle?: boolean;
-}
-
-const { title, banner, description, lang, setOGTypeArticle } = Astro.props
-const hasBannerCredit =
-  siteConfig.banner.enable && siteConfig.banner.credit.enable
-const hasBannerLink = !!siteConfig.banner.credit.url
----
-
-<Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
-=======
 import BackToTop from "@components/control/BackToTop.astro";
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
@@ -69,7 +44,6 @@ const mainPanelTop = siteConfig.banner.enable
 <Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
 
 <!-- Navbar -->
->>>>>>> upstream/main
 <slot slot="head" name="head"></slot>
 <div id="top-row" class="z-50 pointer-events-none relative transition-all duration-700 max-w-[var(--page-width)] px-0 md:px-4 mx-auto" class:list={[""]}>
     <div id="navbar-wrapper" class="pointer-events-auto sticky top-0 transition-all">
@@ -77,10 +51,6 @@ const mainPanelTop = siteConfig.banner.enable
     </div>
 </div>
 
-<<<<<<< HEAD
-<div class="absolute w-full" class:list={[{"top-[30vh]": siteConfig.banner.enable, "top-[5.5rem]": !siteConfig.banner.enable}]}>
-    <div class="relative max-w-[var(--page-width)] mx-auto">
-=======
 <!-- Banner -->
 {siteConfig.banner.enable && <div id="banner-wrapper" class={`absolute z-10 w-full transition duration-700 overflow-hidden`} style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
     <ImageWrapper id="banner" alt="Banner image of the blog" class:list={["object-cover h-full transition duration-700 opacity-0 scale-105"]}
@@ -93,7 +63,6 @@ const mainPanelTop = siteConfig.banner.enable
 <div class="absolute w-full z-30 pointer-events-none" style={`top: ${mainPanelTop}`}>
     <!-- The pointer-events-none here prevent blocking the click event of the TOC -->
     <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto">
->>>>>>> upstream/main
         <div id="main-grid" class="transition duration-700 w-full left-0 right-0 grid grid-cols-[17.5rem_auto] grid-rows-[auto_1fr_auto] lg:grid-rows-[auto]
     mx-auto gap-4 px-0 md:px-4"
         >
@@ -111,11 +80,7 @@ const mainPanelTop = siteConfig.banner.enable
             </a>}
 
 
-<<<<<<< HEAD
-            <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation"></SideBar>
-=======
             <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
->>>>>>> upstream/main
 
             <main id="swup-container" class="transition-swup-fade col-span-2 lg:col-span-1 overflow-hidden">
                 <div id="content-wrapper" class="onload-animation">
@@ -132,11 +97,6 @@ const mainPanelTop = siteConfig.banner.enable
                 <Footer></Footer>
             </div>
         </div>
-<<<<<<< HEAD
-        <BackToTop></BackToTop>
-    </div>
-</div>
-=======
 
         <BackToTop></BackToTop>
     </div>
@@ -162,5 +122,4 @@ const mainPanelTop = siteConfig.banner.enable
         {!siteConfig.toc.enable && <div id="toc"></div>}
     </div>
 </div>
->>>>>>> upstream/main
 </Layout>

@@ -32,23 +32,10 @@ const targetDir = "./src/content/posts/"
 const fullPath = path.join(targetDir, fileName)
 
 if (fs.existsSync(fullPath)) {
-<<<<<<< HEAD
   console.error(`Error：File ${fullPath} already exists `)
   process.exit(1)
 }
 
-=======
-  console.error(`Error: File ${fullPath} already exists `)
-  process.exit(1)
-}
-
-// recursive mode creates multi-level directories
-const dirPath = path.dirname(fullPath)
-if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true })
-}
-
->>>>>>> upstream/main
 const content = `---
 title: ${args[0]}
 published: ${getDate()}

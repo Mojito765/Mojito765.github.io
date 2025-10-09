@@ -4,11 +4,7 @@ published: 2023-10-01
 description: A simple example of a Markdown blog post.
 tags: [Markdown, Blogging, Demo]
 category: Examples
-<<<<<<< HEAD
-draft: true
-=======
 draft: false
->>>>>>> upstream/main
 ---
 
 # An h1 header
@@ -166,8 +162,6 @@ math should get its own line and be put in in double-dollarsigns:
 
 $$I = \int \rho R^{2} dV$$
 
-<<<<<<< HEAD
-=======
 $$
 \begin{equation*}
 \pi
@@ -177,6 +171,5 @@ $$
 \end{equation*}
 $$
 
->>>>>>> upstream/main
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
