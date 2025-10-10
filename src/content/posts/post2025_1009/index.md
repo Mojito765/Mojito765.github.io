@@ -1,5 +1,5 @@
 ---
-title: 'AMD Ryzen 7 7700'
+title: 'AMD Ryzen 7 7700 Unboxing'
 published: 2025-10-09
 description: 'Daily usage log.'
 image: './CPU.jpg'
