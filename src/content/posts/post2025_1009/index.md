@@ -1,7 +1,7 @@
 ---
 title: 'AMD Ryzen 7 7700'
 published: 2025-10-09
-description: 'Daily usage log'
+description: 'Daily usage log.'
 image: './CPU.jpg'
 tags: [Unboxing]
 category: 'PC'
