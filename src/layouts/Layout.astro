@@ -164,7 +164,7 @@ const bannerOffset =
 	'banner-height-home': `${BANNER_HEIGHT_HOME}vh`,
 	'banner-height': `${BANNER_HEIGHT}vh`,
 }}>
-@reference "../styles/main.css";
+@tailwind components;
 @layer components {
 	.enable-banner.is-home #banner-wrapper {
 		@apply h-[var(--banner-height-home)] translate-y-[var(--banner-height-extend)]
@@ -193,6 +193,7 @@ const bannerOffset =
 	}
 }
 </style>
+
 <script>
 import 'overlayscrollbars/overlayscrollbars.css';
 import {
