@@ -5,8 +5,7 @@ description: 'Connect to the PC already set up.'
 image: ''
 tags: [Remote Desktop, Guides]
 category: 'PC'
-draft: false 
-lang: 'zh_TW'
+draft: false
 ---
 
 ## TL;DR
