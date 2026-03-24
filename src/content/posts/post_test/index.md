@@ -5,7 +5,7 @@ description: This is the first post of my new Astro blog.
 image: ./b.png
 tags: []
 category: Records
-draft: false
+draft: true
 lang: jp      # Set only if the post's language differs from the site's language in `config.ts`
 ---
 
