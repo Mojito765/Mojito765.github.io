@@ -1,4 +1,5 @@
 ---
+
 title: Trident Z5 Neo RGB MEMORY Unboxing
 published: 2024-10-29
 description: "DDR5-6000 CL30-38-38-96 1.35V 32GB (2x16GB)"
@@ -24,12 +25,12 @@ SK Hynix IC
 
 ## Testing
 
-| Component     | 		Selection                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `CPU`       | Ryzen 5 7600                                                                                                                                                                                      |
-| `MB`   | B650I AORUS ULTRA                                                                                                                                                                            |
-| `Memory` | F5-6000J3038F16GX2-TZ5NR                                                                                                                                                   |
-| `OS`       | Windows 11 Pro |
+| Component | Selection                |
+| --------- | ------------------------ |
+| `CPU`     | Ryzen 5 7600             |
+| `MB`      | B650I AORUS ULTRA        |
+| `Memory`  | F5-6000J3038F16GX2-TZ5NR |
+| `OS`      | Windows 11 Pro           |
 
 
 ## Performance

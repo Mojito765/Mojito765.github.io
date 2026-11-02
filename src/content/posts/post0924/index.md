@@ -1,4 +1,5 @@
 ---
+
 title: XPG LANCER BLADE DDR5 MEMORY Unboxing
 published: 2024-09-24
 description: "Another good choice for non-RGB DDR5 memory."
@@ -24,12 +25,12 @@ SK Hynix A-Die.
 
 ## Testing
 
-| Component     | 		Selection                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `CPU`       | Ryzen 5 7600                                                                                                                                                                                      |
-| `MB`   | B650I AORUS ULTRA                                                                                                                                                                            |
-| `Memory` | AX5U6400C3216G-DTLABBK                                                                                                                                                   |
-| `OS`       | Windows 11 Pro |
+| Component | Selection              |
+| --------- | ---------------------- |
+| `CPU`     | Ryzen 5 7600           |
+| `MB`      | B650I AORUS ULTRA      |
+| `Memory`  | AX5U6400C3216G-DTLABBK |
+| `OS`      | Windows 11 Pro         |
 
 
 ## Performance

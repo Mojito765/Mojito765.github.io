@@ -1,15 +1,17 @@
 ---
+
 title: 'The Witcher 3: Wild Hunt 中文版必裝Mod'
 published: 2024-10-31
 description: '換個舒服的字體吧！'
 image: ''
 tags: [Gaming, Guides]
 category: 'PC'
-draft: false 
+draft: false
 lang: 'zh_TW'
 ---
 
 ## CodeBay.IN Font Set
+
 Font Mod for Traditional Chinese Text.
 > Nexus Mods link: <a href="https://www.nexusmods.com/witcher3/mods/7252" target="_blank">Source</a>
 
@@ -20,6 +22,7 @@ TOO SWEET!
 :::
 
 ## How to use
+
 推薦**金萱六分糖**字型。
 ![local](ss.png "location")
 
@@ -28,6 +31,7 @@ TOO SWEET!
 :::
 
 ## Screenshots
+
 ![local](ss2.png "intro2")
 
 ![local](ss3.png "intro3")

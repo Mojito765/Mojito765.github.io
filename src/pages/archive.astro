@@ -6,9 +6,33 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPostsList } from "../utils/content-utils";
 
 const sortedPostsList = await getSortedPostsList();
+
+const archivePosts = sortedPostsList.map((post) => ({
+	...post,
+	data: {
+		...post.data,
+		category: post.data.category ?? undefined,
+	},
+}));
+
+const tags = [
+	...new Set(sortedPostsList.flatMap((post) => post.data.tags ?? [])),
+];
+
+const categories = [
+	...new Set(
+		sortedPostsList
+			.map((post) => post.data.category)
+			.filter((category): category is string => category != null),
+	),
+];
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
-    <ArchivePanel sortedPosts={sortedPostsList} client:only="svelte"></ArchivePanel>
+	<ArchivePanel
+		sortedPosts={archivePosts}
+		tags={tags}
+		categories={categories}
+		client:only="svelte"
+	></ArchivePanel>
 </MainGridLayout>
-

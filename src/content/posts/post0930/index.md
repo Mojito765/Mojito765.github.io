@@ -1,4 +1,5 @@
 ---
+
 title: Connecting to Another Windows 11 PC with Remote Desktop
 published: 2024-09-30
 description: 'Connect to the PC already set up.'
